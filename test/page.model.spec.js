@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'test';
 var chai = require('chai');
 var spies = require('chai-spies');
 var expect = chai.expect;
@@ -5,6 +6,7 @@ var assert = chai.assert;
 var models = require('../models');
 var Page = models.Page;
 var marked = require('marked');
+
 
 
 //configure chai
