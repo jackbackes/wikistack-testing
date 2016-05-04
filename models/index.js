@@ -26,7 +26,7 @@ var Page = db.define('page', {
     defaultValue: Sequelize.NOW
   },
   tags: {
-    type: Sequelize.ARRAY(Sequelize.STRING),
+    type: Sequelize.ARRAY(Sequelize.TEXT),
     defaultValue: [],
     set: function (tags) {
 
@@ -56,7 +56,7 @@ var Page = db.define('page', {
       return this.findAll({
         where: {
           tags: {
-            $contains: [tag]
+            $overlap: [tag]
           }
         }
       });

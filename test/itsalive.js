@@ -29,7 +29,7 @@ describe('setTimeout', () => {
 
 describe('testing Chai spies', () => {
 
-  spyable = function(){};
+  var spyable = function(){};
   spyable = chai.spy(spyable);
 
   it('is a spy', () => expect(spyable).to.be.spy)
