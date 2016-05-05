@@ -1,4 +1,4 @@
-process.env.NODE_ENV = 'test';
+global.NODE_ENV = 'test';
 var chai = require('chai');
 var spies = require('chai-spies');
 var expect = chai.expect;
